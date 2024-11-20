@@ -104,6 +104,12 @@ else()
   add_custom_target(relay COMMAND true)
 endif()
 
+if(ENABLE_RUST)
+  add_subdirectory(rust)
+else()
+  add_custom_target(rust COMMAND true)
+endif()
+
 if(ENABLE_SCRIPT)
   add_subdirectory(script)
 else()
